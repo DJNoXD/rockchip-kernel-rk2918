@@ -1,0 +1,13 @@
+#
+# Headset device configuration
+#
+
+menu "Headset device support"
+
+config RK_HEADSET_DET
+	tristate "RK headset detech support"
+	---help---
+		Universal headphone driver(write begin rk29)
+
+endmenu
+
