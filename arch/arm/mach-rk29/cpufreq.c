@@ -32,16 +32,22 @@ static int no_cpufreq_access;
 
 static struct cpufreq_frequency_table default_freq_table[] = {
 //	{ .index = 1100000, .frequency =   24000 },
-//	{ .index = 1200000, .frequency =  204000 },
-//	{ .index = 1200000, .frequency =  300000 },
+// disabled by default
+	{ .index = 1200000, .frequency =  204000 },
+// disabled by default
+	{ .index = 1200000, .frequency =  300000 },
 	{ .index = 1200000, .frequency =  408000 },
-//	{ .index = 1200000, .frequency =  600000 },
+// disabled by default
+	{ .index = 1200000, .frequency =  600000 },
 	{ .index = 1200000, .frequency =  816000 }, /* must enable, see SLEEP_FREQ above */
 
 // disabled by default
 	{ .index = 1250000, .frequency = 1008000 },
+// disabled by default
 	{ .index = 1300000, .frequency = 1104000 },
+// disabled by default
 	{ .index = 1400000, .frequency = 1176000 },
+// disabled by default
 	{ .index = 1400000, .frequency = 1200000 },
 	{ .frequency = CPUFREQ_TABLE_END },
 };
