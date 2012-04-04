@@ -72,7 +72,7 @@ unsigned int event);
 #ifndef CONFIG_CPU_FREQ_DEFAULT_GOV_INTERACTIVE
 static
 #endif
-struct cpufreq_governor cpufreq_gov_interactive = {
+struct cpufreq_governor cpufreq_gov_interactivex = {
 .name = "InteractiveX",
 .governor = cpufreq_governor_interactive,
 .max_transition_latency = 10000000,
@@ -373,7 +373,7 @@ down_wq = create_workqueue("knteractive_down");
 INIT_WORK(&freq_scale_work, cpufreq_interactive_freq_change_time_work);
 
         pr_info("[imoseyon] interactive enter\n");
-return cpufreq_register_governor(&cpufreq_gov_interactive);
+return cpufreq_register_governor(&cpufreq_gov_interactivex);
 }
 
 #ifdef CONFIG_CPU_FREQ_DEFAULT_GOV_INTERACTIVE
@@ -385,7 +385,7 @@ module_init(cpufreq_interactive_init);
 static void __exit cpufreq_interactive_exit(void)
 {
         pr_info("[imoseyon] interactive exit\n");
-cpufreq_unregister_governor(&cpufreq_gov_interactive);
+cpufreq_unregister_governor(&cpufreq_gov_interactivex);
 destroy_workqueue(up_wq);
 destroy_workqueue(down_wq);
 }
